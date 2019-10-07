@@ -1,2 +1,2 @@
 <?php
-echo "Today is ".date("Y/m/d");
+echo $num = date("Y/M/d");
