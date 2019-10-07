@@ -1,3 +1,15 @@
+<?php
+if (isset($_POST["sumbit"])) {
+    $name = $_POST["user_name"];
+    $email = $_POST["email"];
+
+    echo $name;
+    echo "<br>";
+    echo $email;
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,7 +22,7 @@
 </head>
 <body>
 <div class="container">
-    <form method="post">
+    <form action="" method="post">
     <div class="form-group">
         <label for="formGroupExampleInput">Name</label>
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Name" name="user_name">
@@ -30,13 +42,3 @@
 </body>
 </html>
 
-<?php
-if (isset($_POST["submit"])){
-    $name = $_POST["user_name"];
-    $email = $_POST["email"];
-
-    echo $name;
-    echo "<br>";
-    echo $email;
-}
-?>
