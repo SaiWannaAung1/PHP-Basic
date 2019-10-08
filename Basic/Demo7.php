@@ -9,20 +9,40 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<h4 style="text-align: center">Create Login Page with PHP Code</h4>
-<div class="container">
-    <form action="" method="post">
-        <div class="form-group">
-            <label for="formGroupExampleInput">Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Name" name="txt_username">
+<div class="container_fluid">
+    <div class="container my-5">
+        <div class="col-md-8 offset-md-2">
+            <div class="card bg-light p-5">
+
+                <h3 class="text-info text-center mb-3">Login To System</h3>
+                <!--  !Login form start!-->
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="english">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="txt_username">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="english">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="txt_password">
+                    </div>
+
+
+                    <div class="row justify-content-between no-gutters">
+                        <i href="#" class="english"> <?php validate();?></i>
+                        <div>
+
+                            <button type="reset" class="btn btn-outline-secondary english">Cancel</button>
+                            <button type="submit" class="btn btn-primary english" name="btn_login">Login</button>
+                        </div>
+                    </div>
+
+
+                </form>
+
+            </div>
         </div>
-        <div class="form-group">
-            <label for="formGroupExampleInput2">Password</label>
-            <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Enter Password" name="txt_password">
-        </div>
-        <button class="btn btn-success" type="submit" name="btn_login">Submit</button>
-        <button class="btn btn-warning text-light" type="reset" >Clear</button>
-    </form>
+
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -32,35 +52,35 @@
 </html>
 
 
+
 <?php
-if (isset($_POST["btn_login"])) {
-    $name = $_POST["txt_username"];
-    $password = $_POST["txt_password"];
+function validate(){
+    if (isset($_POST["btn_login"])) {
+        $name = $_POST["txt_username"];
+        $password = $_POST["txt_password"];
 
-    $true_name="Admin";
-    $true_password="123";
+        $true_name="Admin@gmail.com";
+        $true_password="123";
 
-    if ($true_name==$name ){
-        if ($true_password==$password)
-        {
-            echo "User name and Password correct";
-        }
-      else{
-          echo "User name is correct and Password incorrect";
-      }
-    }elseif ($true_name!=$name){
-        if ($true_password==$password)
-        {
-            echo "User name is incorrect and Password correct";
-        }else{
-            echo "login fail";
+        if ($true_name==$name ){
+            if ($true_password==$password)
+            {
+                echo "<font style='color: green'>  User name and Password correct</font>";
+            }
+            else{
+                echo "<font style='color: red'> User name is correct and Password incorrect</font>";
+            }
+        }elseif ($true_name!=$name){
+            if ($true_password==$password)
+            {
+                echo "<font style='color: red'>User name is incorrect and Password correct</font>";
+            }else{
+                echo "<font style='color: red'>User name and password is incorrect</font>";
+            }
         }
     }
-
-
-
-
 }
+
 ?>
 
 
