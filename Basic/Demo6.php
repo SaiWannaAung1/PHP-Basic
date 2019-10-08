@@ -42,9 +42,9 @@ if (isset($_POST["btn_login"])) {
     $true_password="123";
 
     if ($true_name==$name && $true_password==$password){
-        echo "Login Success";
+        echo "<font style='color: green'>Login Success</font>";
     }else{
-        echo "Login Fail!";
+        echo "<font style='color: red'>Login Fail</font>";
     }
 }
 ?>
