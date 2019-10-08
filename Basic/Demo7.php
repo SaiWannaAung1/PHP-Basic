@@ -40,11 +40,26 @@ if (isset($_POST["btn_login"])) {
     $true_name="Admin";
     $true_password="123";
 
-    if ($true_name==$name && $true_password==$password){
-        echo "<font style='color: green'>Login Success</font>";
-    }else{
-        echo "<font style='color: red'>Login Fail</font>";
+    if ($true_name==$name ){
+        if ($true_password==$password)
+        {
+            echo "User name and Password correct";
+        }
+      else{
+          echo "User name is correct and Password incorrect";
+      }
+    }elseif ($true_name!=$name){
+        if ($true_password==$password)
+        {
+            echo "User name is incorrect and Password correct";
+        }else{
+            echo "login fail";
+        }
     }
+
+
+
+
 }
 ?>
 
