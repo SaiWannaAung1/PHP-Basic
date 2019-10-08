@@ -44,7 +44,7 @@ if (isset($_POST["btn_login"])) {
     if ($true_name==$name && $true_password==$password){
         echo "Login Success";
     }else{
-        echo "Login Fail";
+        echo "Login Fail!";
     }
 }
 ?>
