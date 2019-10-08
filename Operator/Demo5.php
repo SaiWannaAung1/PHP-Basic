@@ -1,14 +1,3 @@
-<?php
-if (isset($_POST["submit"])) {
-    $name = $_POST["user_name"];
-    $email = $_POST["email"];
-
-    echo $name;
-    echo "<br>";
-    echo $email;
-}
-?>
-
 
 <!doctype html>
 <html lang="en">
@@ -21,17 +10,18 @@ if (isset($_POST["submit"])) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+<h4 style="text-align: center">Create Login Page with PHP Code</h4>
 <div class="container">
     <form action="" method="post">
-    <div class="form-group">
-        <label for="formGroupExampleInput">Name</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Name" name="user_name">
-    </div>
-    <div class="form-group">
-        <label for="formGroupExampleInput2">Email</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Email" name="email">
-    </div>
-        <button class="btn btn-success" type="submit" name="submit">Submit</button>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Name" name="txt_username">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Password</label>
+            <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Enter Password" name="txt_password">
+        </div>
+        <button class="btn btn-success" type="submit" name="btn_login">Submit</button>
         <button class="btn btn-warning text-light" type="reset" >Clear</button>
     </form>
 </div>
@@ -41,3 +31,17 @@ if (isset($_POST["submit"])) {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+<?php
+if (isset($_POST["btn_login"])) {
+    $name = $_POST["txt_username"];
+    $password = $_POST["txt_password"];
+
+    echo $name;
+    echo "<br>";
+    echo $password;
+}
+?>
+
+

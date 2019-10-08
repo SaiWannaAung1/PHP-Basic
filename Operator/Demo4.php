@@ -1,5 +1,5 @@
 <?php
-if (isset($_GET["sumbit"])) {
+if (isset($_GET["submit"])) {
     $name = $_GET["user_name"];
     $email = $_GET["email"];
 
@@ -31,7 +31,7 @@ if (isset($_GET["sumbit"])) {
             <label for="formGroupExampleInput2">Email</label>
             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Email" name="email">
         </div>
-        <button class="btn btn-success" type="submit">Submit</button>
+        <button class="btn btn-success" type="submit" name="submit">Submit</button>
         <button class="btn btn-warning text-light" type="reset" >Submit</button>
     </form>
 </div>
