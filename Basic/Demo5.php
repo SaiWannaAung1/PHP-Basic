@@ -40,6 +40,7 @@ if (isset($_POST["btn_login"])) {
     echo $name;
     echo "<br>";
     echo $password;
+    echo "<script type='text/javascript'>alert('Hello, $name')</script>";
 }
 ?>
 
