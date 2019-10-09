@@ -60,21 +60,15 @@ function validate(){
         $true_email="Admin@gmail.com";
         $true_password="123";
 
-        if ($true_email==$email ){
-            if ($true_password==$password)
-            {
-                echo "<span class='badge badge-success'> Email and Password correct</span>";
-            }
-            else{
-                echo "<span class='badge badge-danger'> Email correct and Password incorrect</span>";
-            }
-        }elseif ($true_email!=$email){
-            if ($true_password!=$password)
-            {
-                echo "<span class='badge badge-danger'>Email and password incorrect</span>";
-            }else{
-                echo "<span class='badge badge-danger'>Email incorrect and Password correct</span>";
-            }
+        if ($true_email==$email && $true_password == $password){
+            echo "<span class='badge badge-success'> Email and Password correct</span>";
+
+        }elseif ($true_email!=$email&& $true_password == $password){
+            echo "<span class='badge badge-danger'>Email incorrect and Password correct</span>";
+        }elseif ($true_email==$email&& $true_password != $password){
+            echo "<span class='badge badge-danger'> Email correct and Password incorrect</span>";
+        }else{
+            echo "<span class='badge badge-danger'>Email and password incorrect</span>";
         }
     }
 
