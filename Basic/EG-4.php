@@ -3,16 +3,4 @@ $text = "Inle Lake is a freshwater lake located in the Nyaungshwe Township of Ta
 echo "String length is ".strlen($text)."<br>";
 echo "Word is ".str_word_count($text)."<br>";
 echo "First Is Upper :".ucwords(strtolower($text))."<br>";
-echo "fIRST iS lOWER :".strtoupper($text);echo "String length is ".strlen($text)."<br>";
-echo "Word is ".str_word_count($text)."<br>";
-echo "First Is Upper :".ucwords(strtolower($text))."<br>";
-echo "fIRST iS lOWER :".strtoupper($text);echo "String length is ".strlen($text)."<br>";
-echo "Word is ".str_word_count($text)."<br>";
-echo "First Is Upper :".ucwords(strtolower($text))."<br>";
-echo "fIRST iS lOWER :".strtoupper($text);echo "String length is ".strlen($text)."<br>";
-echo "Word is ".str_word_count($text)."<br>";
-echo "First Is Upper :".ucwords(strtolower($text))."<br>";
-echo "fIRST iS lOWER :".strtoupper($text);echo "String length is ".strlen($text)."<br>";
-echo "Word is ".str_word_count($text)."<br>";
-echo "First Is Upper :".ucwords(strtolower($text))."<br>";
 echo "fIRST iS lOWER :".strtoupper($text);
