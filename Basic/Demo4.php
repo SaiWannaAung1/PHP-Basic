@@ -2,7 +2,6 @@
 if (isset($_GET["submit"])) {
     $name = $_GET["user_name"];
     $email = $_GET["email"];
-
     echo $name;
     echo "<br>";
     echo $email;
@@ -32,7 +31,7 @@ if (isset($_GET["submit"])) {
             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Email" name="email">
         </div>
         <button class="btn btn-success" type="submit" name="submit">Submit</button>
-        <button class="btn btn-warning text-light" type="reset" >Submit</button>
+        <button class="btn btn-warning text-light" type="reset" >Cancel</button>
     </form>
 </div>
 
