@@ -6,55 +6,79 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<table width="1000px">
+<div class="container">
+<form action="" method="post" class="form-group">
+<table class="table" >
+    <thead class="thead-dark">
     <tr>
-        <th>ID</th>
-        <th colspan="1">Product Name</th>
-        <th colspan="1">Price</th>
-        <th colspan="1">Quantity</th>
-        <th colspan="1">Amount</th>
+        <th class="">ID</th>
+        <th >Product Name</th>
+        <th >Price</th>
+        <th >Quantity</th>
+        <th >Amount</th>
     </tr>
+    </thead>
     <tr>
-    <td colspan="1" style="text-align: center">1</td>
-    <td colspan="1" style="text-align: center">Water</td>
-    <td colspan="1" style="text-align: center">$1</td>
-    <td colspan="1" style="text-align: center"> <input type="text"></td>
-    <td colspan="1" style="text-align: center"> <input type="text"></td>
+    <td >1</td>
+    <td >Water</td>
+    <td >$1</td>
+    <td>
+      <input type="number" min="0" class="form-control w-25 p-3" placeholder="Qty" name="qty1">
+    </td>
+    <td  >      <input type="text" class="form-control w-25 p-3" placeholder="Amount" name="amount1"></td>
 
     </tr><tr>
 
 
     </tr><tr>
-    <td colspan="1" style="text-align: center">2</td>
-    <td colspan="1" style="text-align: center">Milk</td>
-    <td colspan="1" style="text-align: center">$2</td>
-    <td colspan="1" style="text-align: center"> <input type="text"></td>
-    <td colspan="1" style="text-align: center"> <input type="text"></td>
+    <td  >2</td>
+    <td  >Milk</td>
+    <td  >$2</td>
+        <td>
+            <input type="number" min="0" class="form-control w-25 p-3" placeholder="Qty" name="qty2">
+        </td>
+        <td  >      <input type="text" class="form-control w-25 p-3" placeholder="Amount" name="amount2"></td>
 
     </tr><tr>
-    <td colspan="1" style="text-align: center">3</td>
-    <td colspan="1" style="text-align: center">Ma Ma</td>
-    <td colspan="1" style="text-align: center">$1</td>
-    <td colspan="1" style="text-align: center"> <input type="text"></td>
-    <td colspan="1" style="text-align: center"> <input type="text"></td>
+    <td  >3</td>
+    <td  >Ma Ma</td>
+    <td  >$1</td>
+        <td>
+            <input type="number" min="0" class="form-control w-25 p-3" placeholder="Qty" name="qty3">
+        </td>
+        <td  >      <input type="text" class="form-control w-25 p-3" placeholder="Amount" name="amount3"></td>
 
     </tr><tr>
-    <td colspan="1" style="text-align: center">4</td>
-    <td colspan="1" style="text-align: center">Ve Ve</td>
-    <td colspan="1" style="text-align: center">$1</td>
-    <td colspan="1" style="text-align: center"> <input type="text"></td>
-    <td colspan="1" style="text-align: center"> <input type="text"></td>
+    <td  >4</td>
+    <td  >Ve Ve</td>
+    <td  >$1</td>
+        <td>
+            <input type="number" min="0" class="form-control w-25 p-3" placeholder="Qty" name="qty4">
+        </td>
+        <td  >      <input type="text" class="form-control w-25 p-" placeholder="Amount" name="amount4"></td>
 
     </tr>
-    <td colspan="1" style="text-align: center">5</td>
-    <td colspan="1" style="text-align: center">Pencil</td>
-    <td colspan="1" style="text-align: center">$1</td>
-    <td colspan="1" style="text-align: center"> <input type="text"></td>
-    <td colspan="1" style="text-align: center"> <input type="text"></td>
+    <td  >5</td>
+    <td  >Pencil</td>
+    <td  >$1</td>
+    <td>
+        <input type="number" min="0" class="form-control w-25 p-3" placeholder="Qty" name="qty5">
+    </td>
+    <td  >      <input type="text" class="form-control w-25 p-3" placeholder="Amount" name="amount5"></td>
 
 </table>
+    <button class="btn btn-primary  " type="submit" name="btn_search">Calculate</button>
+    <button class="btn btn-warning text-light" type="reset" >Clear</button>
+</form>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
 
