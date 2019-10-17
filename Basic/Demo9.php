@@ -1,3 +1,31 @@
+<?php
+
+if (isset($_POST["btn_calculate"]))
+{
+    for ($i=0; $i<=4; $i++)
+    {
+        $number=$i+1;
+
+        if ($_POST["qty$number"]==null || $_POST["qty$number"]=="")
+{
+    $price=$_POST["price$number"];
+    $qty= 0;
+    $amount[$i] = $price[$i] * $qty[$i];
+    $total = array_sum($amount);
+
+}else{
+            $price=$_POST["price$number"];
+            $qty= $_POST["qty$number"];
+            $amount[$i] = $price[$i] * $qty[$i];
+            $total = array_sum($amount);
+        }
+
+    }
+echo "$total";
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,7 +38,7 @@
 </head>
 <body>
 <div class="container">
-<form action="" method="post" class="form-group">
+<form action="" method="post" class="form-group p-4">
 <table class="table" >
     <thead class="thead-dark">
     <tr>
@@ -24,11 +52,11 @@
     <tr>
     <td >1</td>
     <td >Water</td>
-    <td >$1</td>
+    <td >$1<input type="text" class="invisible" name="price1" value="1">  </td>
     <td>
-      <input type="number" min="0" class="form-control w-25 p-3" placeholder="Qty" name="qty1">
+      <input type="number" min="0" class="form-control w-25 p-3"  name="qty1" value="">
     </td>
-    <td  >      <input type="text" class="form-control w-25 p-3" placeholder="Amount" name="amount1"></td>
+    <td  >      <input type="text" class="form-control w-25 p-3" placeholder="Amount" name="amount1" value="<?php echo @$amount[0] ?>"></td>
 
     </tr><tr>
 
@@ -36,41 +64,41 @@
     </tr><tr>
     <td  >2</td>
     <td  >Milk</td>
-    <td  >$2</td>
+    <td  >$2<input type="text" class="invisible" name="price2" value="2"></td>
         <td>
-            <input type="number" min="0" class="form-control w-25 p-3" placeholder="Qty" name="qty2">
+            <input type="number" min="0" class="form-control w-25 p-3" name="qty2">
         </td>
-        <td  >      <input type="text" class="form-control w-25 p-3" placeholder="Amount" name="amount2"></td>
+        <td  >      <input type="text" class="form-control w-25 p-3" placeholder="Amount" name="amount2" value="<?php echo @$amount[1] ?>"></td>
 
     </tr><tr>
     <td  >3</td>
     <td  >Ma Ma</td>
-    <td  >$1</td>
+    <td  >$1<input type="text" class="invisible" name="price3" value="1"></td>
         <td>
-            <input type="number" min="0" class="form-control w-25 p-3" placeholder="Qty" name="qty3">
+            <input type="number" min="0" class="form-control w-25 p-3"  name="qty3">
         </td>
-        <td  >      <input type="text" class="form-control w-25 p-3" placeholder="Amount" name="amount3"></td>
+        <td  >      <input type="text" class="form-control w-25 p-3" placeholder="Amount" name="amount3" value="<?php echo @$amount[2] ?>"></td>
 
     </tr><tr>
     <td  >4</td>
     <td  >Ve Ve</td>
-    <td  >$1</td>
+    <td  >$1<input type="text" class="invisible" name="price4" value="1"></td>
         <td>
-            <input type="number" min="0" class="form-control w-25 p-3" placeholder="Qty" name="qty4">
+            <input type="number" min="0" class="form-control w-25 p-3"  name="qty4">
         </td>
-        <td  >      <input type="text" class="form-control w-25 p-" placeholder="Amount" name="amount4"></td>
+        <td  >      <input type="text" class="form-control w-25 p-" placeholder="Amount" name="amount4" value="<?php echo @$amount[3] ?>"></td>
 
     </tr>
     <td  >5</td>
     <td  >Pencil</td>
-    <td  >$1</td>
+    <td  >$1<input type="text" class="invisible" name="price5" value="1"></td>
     <td>
-        <input type="number" min="0" class="form-control w-25 p-3" placeholder="Qty" name="qty5">
+        <input type="number" min="0" class="form-control w-25 p-3"  name="qty5">
     </td>
-    <td  >      <input type="text" class="form-control w-25 p-3" placeholder="Amount" name="amount5"></td>
+    <td  >      <input type="text" class="form-control w-25 p-3" placeholder="Amount" name="amount5" value="<?php echo @$amount[4] ?>"></td>
 
 </table>
-    <button class="btn btn-primary  " type="submit" name="btn_search">Calculate</button>
+    <button class="btn btn-primary  " type="submit" name="btn_calculate">Calculate</button>
     <button class="btn btn-warning text-light" type="reset" >Clear</button>
 </form>
 </div>
@@ -81,4 +109,3 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-
