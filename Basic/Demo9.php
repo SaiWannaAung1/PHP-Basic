@@ -6,7 +6,7 @@ if (isset($_POST["btn_calculate"]))
     {
         $number=$i+1;
 
-        if ($_POST["qty$number"]==null || $_POST["qty$number"]=="")
+        if (empty( $_POST["qty$number"] ) )
 {
     $price=$_POST["price$number"];
     $qty= 0;
