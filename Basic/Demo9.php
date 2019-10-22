@@ -2,29 +2,27 @@
 
 if (isset($_POST["btn_calculate"]))
 {
-    for ($i=0; $i<=4; $i++)
-    {
-        $number=$i+1;
+    for ($i=0; $i<=4; $i++) {
+        $errors=[];
+        $number = $i + 1;
+        $qty[$i] = trim($_POST["qty$number"]);
+        if (empty($qty[$i])) {
+            $price[$i]=$_POST["price$number"];
+            $qty[$i]= 0;
+            $amount[$i] = $price[$i] * $qty[$i];
+            $total = array_sum($amount);
 
-        if (empty( $_POST["qty$number"] ) )
-{
-    $price=$_POST["price$number"];
-    $qty= 0;
-    $amount[$i] = $price[$i] * $qty[$i];
-    $total = array_sum($amount);
-
-}else{
-            $price=$_POST["price$number"];
-            $qty= $_POST["qty$number"];
+        }else{
+            $price[$i]=$_POST["price$number"];
             $amount[$i] = $price[$i] * $qty[$i];
             $total = array_sum($amount);
         }
-
     }
-echo "$total";
+    echo "<script type='text/javascript'>alert('$$total')</script>";
 }
-?>
 
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -38,6 +36,8 @@ echo "$total";
 </head>
 <body>
 <div class="container">
+
+
 <form action="" method="post" class="form-group p-4">
 <table class="table" >
     <thead class="thead-dark">
